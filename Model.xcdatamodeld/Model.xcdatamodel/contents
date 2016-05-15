@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6254" systemVersion="14A389" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Category" syncable="YES">
+        <attribute name="categoryID" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="categoryFeedRelation" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Feed" inverseName="feedCategoryRelation" inverseEntity="Feed" syncable="YES"/>
+    </entity>
+    <entity name="Feed" syncable="YES">
+        <attribute name="feedID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="feedType" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="feedCategoryRelation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Category" inverseName="categoryFeedRelation" inverseEntity="Category" syncable="YES"/>
+        <relationship name="feedImageRelation" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Image" inverseName="imageFeedRelation" inverseEntity="Image" syncable="YES"/>
+        <relationship name="feedLocationRelation" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Location" inverseName="locationFeedRelation" inverseEntity="Location" syncable="YES"/>
+        <relationship name="feedRateRelation" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Rating" inverseName="rateFeedRelation" inverseEntity="Rating" syncable="YES"/>
+        <relationship name="feedUserRelation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="userFeedRelation" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="FriendInvite" syncable="YES">
+        <attribute name="inviteID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="inviteStatus" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="inviteFromUserRelation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="userInviteFromRelation" inverseEntity="User" syncable="YES"/>
+        <relationship name="inviteToUserRelation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="userInviteToRelation" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="Image" syncable="YES">
+        <attribute name="imageID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imageIsDefault" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <relationship name="imageFeedRelation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Feed" inverseName="feedImageRelation" inverseEntity="Feed" syncable="YES"/>
+    </entity>
+    <entity name="Location" syncable="YES">
+        <attribute name="locationID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="locationLat" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="locationLong" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="locationType" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="locationFeedRelation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Feed" inverseName="feedLocationRelation" inverseEntity="Feed" syncable="YES"/>
+        <relationship name="locationUserRelation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="userLocationRelation" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="Rating" syncable="YES">
+        <attribute name="rateStatus" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="rateFeedRelation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Feed" inverseName="feedRateRelation" inverseEntity="Feed" syncable="YES"/>
+        <relationship name="rateUserRelation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="userRateRelation" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="User" syncable="YES">
+        <attribute name="userID" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="userFeedRelation" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Feed" inverseName="feedUserRelation" inverseEntity="Feed" syncable="YES"/>
+        <relationship name="userInviteFromRelation" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="FriendInvite" inverseName="inviteFromUserRelation" inverseEntity="FriendInvite" syncable="YES"/>
+        <relationship name="userInviteToRelation" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="FriendInvite" inverseName="inviteToUserRelation" inverseEntity="FriendInvite" syncable="YES"/>
+        <relationship name="userLocationRelation" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Location" inverseName="locationUserRelation" inverseEntity="Location" syncable="YES"/>
+        <relationship name="userRateRelation" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Rating" inverseName="rateUserRelation" inverseEntity="Rating" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Feed" positionX="7" positionY="-54" width="128" height="148"/>
+        <element name="User" positionX="-191" positionY="38" width="128" height="133"/>
+        <element name="Location" positionX="-189" positionY="-162" width="128" height="133"/>
+        <element name="Category" positionX="189" positionY="-37" width="128" height="73"/>
+        <element name="Image" positionX="115" positionY="153" width="128" height="88"/>
+        <element name="FriendInvite" positionX="-387" positionY="32" width="128" height="103"/>
+        <element name="Rating" positionX="-29" positionY="191" width="128" height="88"/>
+    </elements>
+</model>

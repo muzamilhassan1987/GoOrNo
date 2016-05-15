@@ -1,0 +1,21 @@
+navigation-bar, toolbar {
+  background-color: #3c3c3c;
+  color: #fff; }
+  navigation-bar title, toolbar title {
+    color: #fff; }
+  navigation-bar.PostTypeGoNo, toolbar.PostTypeGoNo {
+    background-color: #1bb8d7; }
+  navigation-bar.PostTypeMultiPic, toolbar.PostTypeMultiPic {
+    background-color: #ff7b54; }
+  navigation-bar.PostTypeMultiAnswer, toolbar.PostTypeMultiAnswer {
+    background-color: #45b771; }
+  navigation-bar.PostTypeRatePlace, toolbar.PostTypeRatePlace {
+    background-color: #61286d; }
+  navigation-bar.Ruling, toolbar.Ruling {
+    background-color: #45b771; }
+  navigation-bar.Stats, toolbar.Stats {
+    background-color: #ff7b54; }
+  navigation-bar.White, toolbar.White {
+    background-color: #ffffff; }
+
+/*# sourceMappingURL=default.css.map */

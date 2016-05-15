@@ -1,0 +1,36 @@
+navigation-bar, toolbar {
+	background-color: #3c3c3c;
+	color: #fff;
+
+	title {
+		color: #fff;
+	}
+
+	&.PostTypeGoNo {
+		background-color: #1bb8d7;
+	}
+
+	&.PostTypeMultiPic {
+		background-color: #ff7b54;
+	}
+
+	&.PostTypeMultiAnswer {
+		background-color: #45b771;
+	}
+
+	&.PostTypeRatePlace {
+		background-color: #61286d;
+	}
+
+	&.Ruling {
+		background-color: #45b771;
+	}
+
+	&.Stats {
+		background-color: #ff7b54;
+	}
+
+	&.White {
+		background-color: #ffffff;
+	}
+}

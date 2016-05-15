@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13F1077" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment defaultVersion="1792" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StatsMainDetailViewController"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="StatHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B2g-pY-9Bs" userLabel="Progress View">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k8F-g7-gkR" customClass="KAProgressLabel">
+                            <rect key="frame" x="32" y="35" width="80" height="80"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="80" id="mkP-y6-Ecs"/>
+                                <constraint firstAttribute="height" constant="80" id="ugZ-dS-d7F"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hBA-8K-7nx" customClass="KAProgressLabel">
+                            <rect key="frame" x="209" y="35" width="80" height="80"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="80" id="7Gx-3C-xnt"/>
+                                <constraint firstAttribute="width" constant="80" id="Hiq-04-CRw"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m7z-lS-BUX">
+                            <rect key="frame" x="8" y="148" width="304" height="2"/>
+                            <color key="backgroundColor" red="0.93478260869999996" green="0.93478260869999996" blue="0.93478260869999996" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="2" id="bg0-vX-w9a"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cCL-S3-teh">
+                            <rect key="frame" x="120" y="59" width="81" height="31"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="81" id="KOi-wZ-vTR"/>
+                                <constraint firstAttribute="height" constant="31" id="aMp-gu-ZUG"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                            <color key="textColor" red="0.28817085599999998" green="0.28817085599999998" blue="0.28817085599999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Users Replied" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x9L-ea-jIc">
+                            <rect key="frame" x="118" y="99" width="85" height="16"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="16" id="W4p-VT-KhC"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" red="0.21195652170000001" green="0.21195652170000001" blue="0.21195652170000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="x9L-ea-jIc" firstAttribute="top" secondItem="cCL-S3-teh" secondAttribute="bottom" constant="9" id="212-2d-eXw"/>
+                        <constraint firstAttribute="centerX" secondItem="cCL-S3-teh" secondAttribute="centerX" id="224-54-So7"/>
+                        <constraint firstAttribute="trailing" secondItem="m7z-lS-BUX" secondAttribute="trailing" constant="8" id="CwY-R8-DOL"/>
+                        <constraint firstItem="hBA-8K-7nx" firstAttribute="leading" secondItem="x9L-ea-jIc" secondAttribute="trailing" constant="6" id="NQL-eQ-6cq"/>
+                        <constraint firstAttribute="centerY" secondItem="cCL-S3-teh" secondAttribute="centerY" id="Xzg-jt-Brj"/>
+                        <constraint firstItem="k8F-g7-gkR" firstAttribute="top" secondItem="B2g-pY-9Bs" secondAttribute="top" constant="35" id="edj-yh-eNz"/>
+                        <constraint firstItem="cCL-S3-teh" firstAttribute="leading" secondItem="k8F-g7-gkR" secondAttribute="trailing" constant="8" id="hKW-pu-2C8"/>
+                        <constraint firstItem="m7z-lS-BUX" firstAttribute="leading" secondItem="B2g-pY-9Bs" secondAttribute="leading" constant="8" id="hbb-rc-Hx7"/>
+                        <constraint firstAttribute="bottom" secondItem="m7z-lS-BUX" secondAttribute="bottom" id="hxX-gi-5Ee"/>
+                        <constraint firstItem="x9L-ea-jIc" firstAttribute="leading" secondItem="k8F-g7-gkR" secondAttribute="trailing" constant="6" id="xaS-sb-de6"/>
+                        <constraint firstAttribute="centerX" secondItem="m7z-lS-BUX" secondAttribute="centerX" id="yeX-l0-nWc"/>
+                        <constraint firstItem="hBA-8K-7nx" firstAttribute="top" secondItem="B2g-pY-9Bs" secondAttribute="top" constant="35" id="zB2-lA-c3q"/>
+                        <constraint firstItem="hBA-8K-7nx" firstAttribute="leading" secondItem="cCL-S3-teh" secondAttribute="trailing" constant="8" id="zmW-GE-SAE"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="B2g-pY-9Bs" secondAttribute="bottom" id="DYp-3o-fUQ"/>
+                <constraint firstItem="B2g-pY-9Bs" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="EP8-t2-kVb"/>
+                <constraint firstAttribute="trailing" secondItem="B2g-pY-9Bs" secondAttribute="trailing" id="fsZ-AJ-3df"/>
+                <constraint firstItem="B2g-pY-9Bs" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="hHG-Ii-MtW"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="kLabelNo" destination="hBA-8K-7nx" id="Rh8-zt-2gH"/>
+                <outlet property="kLabelYes" destination="k8F-g7-gkR" id="lQr-Nz-q7h"/>
+                <outlet property="labelReplyNumber" destination="cCL-S3-teh" id="PTV-Kp-cdj"/>
+            </connections>
+        </view>
+    </objects>
+</document>
